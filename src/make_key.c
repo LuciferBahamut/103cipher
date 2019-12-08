@@ -6,6 +6,7 @@
 */
 
 #include <stdlib.h>
+int my_strlen(char *str);
 
 int make_size(char *key)
 {
@@ -23,13 +24,11 @@ int make_size(char *key)
 float **fill_key(float **f, char *key, int size)
 {
     int i = 0;
-    char c;
 
     for (int j = 0; j < size; j++) {
         for (int k = 0; k < size; k++) {
             if (key[i] != '\0') {
-                c = key[i];
-                f[j][k] = c;
+                f[j][k] = key[i];
                 i++;
             }
             else 
