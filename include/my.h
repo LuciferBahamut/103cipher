@@ -20,5 +20,6 @@ float **make_key(char *key);
 float **make_password(char *password, int size);
 int get_size(float **f);
 int my_strlen(char *str);
+float **multi_architech(float **f, float **key, int size);
 
 #endif

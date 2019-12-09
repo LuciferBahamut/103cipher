@@ -18,7 +18,7 @@ float calc_multi(float **f, float **key, int i, int j)
 
 float **mult_architech(float **f, float **key, int size)
 {
-    float **r = create_matrix_e(size);
+    float **r = create_matrix_e(size, get_size(f));
 
     for (int i = 0; i < get_size(f); i++) {
         for (int j = 0; j < size; j++) {

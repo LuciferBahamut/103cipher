@@ -20,5 +20,6 @@ int main(int ac, char **av)
     }
     key = make_key(av[2]);
     password = make_password(av[1], get_size(key));
+    password = multi_architect(password, key, get_size(key));
     return (0);
 }
