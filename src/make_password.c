@@ -17,7 +17,7 @@ float **fill_password(float **f, char *password, int size, int lines)
                 f[i][j] = password[k];
                 k++;
             }
-            else 
+            else
                 f[i][j] = 0;
         }
     }
@@ -38,7 +38,7 @@ float **make_password(char *password, int size)
     float **f;
     int i = num_ligne(my_strlen(password), size);
 
-    f = malloc(sizeof(float*) * i);
+    f = malloc(sizeof(float *) * i);
     for (int j = 0; j < i; j++)
         f[j] = malloc(size);
     f = fill_password(f, password, size, i);

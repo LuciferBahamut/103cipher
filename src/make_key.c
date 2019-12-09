@@ -30,7 +30,7 @@ float **fill_key(float **f, char *key, int size)
                 f[j][k] = key[i];
                 i++;
             }
-            else 
+            else
                 f[j][k] = 0;
         }
     }
@@ -40,7 +40,7 @@ float **fill_key(float **f, char *key, int size)
 float **make_key(char *key)
 {
     int i = make_size(key);
-    float **f = malloc(sizeof(float*) * i);
+    float **f = malloc(sizeof(float *) * i);
 
     for (int j = 0; j < i; j++)
         f[j] = malloc(i);
