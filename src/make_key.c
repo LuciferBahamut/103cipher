@@ -9,15 +9,12 @@
 
 int make_size(char *key)
 {
-    int i = my_strlen(key);
-    int j = 0;
-
-    while (i > 0)
-    {
-        i /= 2;
-        j++;
-    }
-    return (j);
+    int i = sqrt(my_strlen(key));
+    int j = my_strlen(key);
+    
+    if (!(i * i >= j))
+        i++;
+    return (i);
 }
 
 float **fill_key(float **f, char *key, int size)

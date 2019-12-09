@@ -21,8 +21,8 @@ int main(int ac, char **av)
     if (av[3][0] == '0') {
     key = make_key(av[2]);
     display_key_0(key, make_size(av[2]));
-    password = make_password(av[1], get_size(key));
-    display_psw_0(password, num_ligne(my_strlen(password), get_size(av[2])));
+    password = make_password(av[1], make_size(av[2]));
+    display_psw_0(password, num_ligne(my_strlen(av[1]), get_size(key)));
 //    password = multi_architect(password, key, get_size(key));
     }
     if (av[3][0] == '1') {
