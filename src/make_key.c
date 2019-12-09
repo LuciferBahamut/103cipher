@@ -5,8 +5,7 @@
 ** key
 */
 
-#include <stdlib.h>
-int my_strlen(char *str);
+#include "my.h"
 
 int make_size(char *key)
 {

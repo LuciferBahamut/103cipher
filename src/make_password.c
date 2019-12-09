@@ -5,8 +5,7 @@
 ** password
 */
 
-#include <stdlib.h>
-int my_strlen(char *str);
+#include "my.h"
 
 float **fill_password(float **f, char *password, int size, int lines)
 {

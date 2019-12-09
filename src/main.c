@@ -5,17 +5,20 @@
 ** main
 */
 
-float **make_key(char *key);
-float **make_password(char *password, int size);
-int get_size(float **f);
+#include "my.h"
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
     float **key;
     float **password;
-    if (argc != 4)
+
+    if (error_handling(ac, av) == 1)
         return (84);
-    key = make_key(argv[2]);
-    password = make_password(argv[1], get_size(key));
+    if (av[1][0] == '-' && av[1][1] == 'h') {
+        display_help();
+        return (0);
+    }
+    key = make_key(av[2]);
+    password = make_password(av[1], get_size(key));
     return (0);
 }
