@@ -18,8 +18,13 @@ int main(int ac, char **av)
         display_help();
         return (0);
     }
+    if (av[3][0] == '0') {
     key = make_key(av[2]);
     password = make_password(av[1], get_size(key));
-    password = multi_architect(password, key, get_size(key));
+//    password = multi_architect(password, key, get_size(key));
+    }
+    if (av[3][0] == '1') {
+        return (0);
+    }
     return (0);
 }
