@@ -23,7 +23,7 @@ int main(int ac, char **av)
     display_key_0(key, make_size(av[2]));
     password = make_password(av[1], make_size(av[2]));
     display_psw_0(password, num_ligne(my_strlen(av[1]), get_size(key)));
-//    password = multi_architect(password, key, get_size(key));
+    password = mult_architech(password, key, make_size(av[2]));
     }
     if (av[3][0] == '1') {
         return (0);

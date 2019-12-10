@@ -22,7 +22,7 @@ void display_psw_0(float **password, int size)
     printf("\nEncrypted message:\n");
     for (int i = 0; i != size; i++) {
         for (int j = 0; j != size; j++)
-            printf("%.0f", password);
+            printf("%.0f", password[i][j]);
         printf(" ");
     }
     printf("\n");

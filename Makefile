@@ -14,7 +14,9 @@ SRC	=	src/main.c \
 		src/make_password.c \
 		src/my_strlen.c \
 		src/get_size.c \
-		src/display.c
+		src/display.c \
+		src/architect.c \
+		src/make_emptymatrix.c
 
 CC	=	gcc
 
