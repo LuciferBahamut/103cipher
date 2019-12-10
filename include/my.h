@@ -26,6 +26,6 @@ float **make_emptymatrix(int width, int height);
 void display_key_0(float **key, int size);
 int make_size(char *key);
 int num_ligne(int len, int size);
-void display_psw_0(float **password, int size);
+void display_psw_0(float **password, int size, int sizepsw);
 
 #endif

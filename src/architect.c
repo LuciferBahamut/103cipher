@@ -21,10 +21,8 @@ float **mult_architech(float **f, float **key, int size)
     float **r = make_emptymatrix(size, get_size(f));
     
     for (int i = 0; i < get_size(f); i++) {
-        for (int j = 0; j < size; j++) {
+        for (int j = 0; j < size; j++)
             r[i][j] = calc_multi(f, key, i, j);
-            printf("%.0f\n", r[i][j]);
-        }
     }
     return (r);
 }
