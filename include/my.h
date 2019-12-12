@@ -34,7 +34,7 @@ float **reverse2x2(float **matrix);
 void display_key_1(float **key);
 void display_psw_1(float **password, int size, int sizepsw);
 int nb_space(char *msg);
-float **trans_msg(char **msg, char **av);
+float **trans_msg(char **msg, char **av, int size);
 float **calc_decryt_m(float **psw, float **key, int size, int lenght);
 
 #define LENGHT num_ligne(my_strlen(av[1]), make_size(av[2]))

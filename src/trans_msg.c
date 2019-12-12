@@ -7,15 +7,19 @@
 
 #include "my.h"
 
-float **trans_msg(char **msg, char **av)
+float **trans_msg(char **msg, char **av, int size)
 {
-    int nb = sqrt((nb_space(av[1]) + 1));
-    float **psw = malloc(sizeof(float *) * nb);
+    float **psw;
     int k = 0;
+    int nbnb = nb_space(av[2]) + 1;
+    int nb_ligne = nbnb / size;
 
-    for (int i = 0; i != nb; i++) {
-        psw[i] = malloc(sizeof(float) * (nb + 1));
-        for (int j = 0; j != nb; j++) {
+    if (nb_ligne % size != 0)
+        nb_ligne++;
+    psw = malloc(sizeof(float *) * nb_ligne);
+    for (int i = 0; i != nb_ligne; i++) {
+        psw[i] = malloc(sizeof(float) * size);
+        for (int j = 0; j != size; j++) {
             psw[i][j] = atof(msg[k]);
             k++;
         }
