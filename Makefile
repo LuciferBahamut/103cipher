@@ -17,7 +17,9 @@ SRC	=	src/main.c \
 		src/architect.c \
 		src/make_emptymatrix.c \
 		src/encryt_decryt.c \
-		src/reverse.c
+		src/reverse.c \
+		src/split.c \
+		src/trans_msg.c
 
 CC	=	gcc
 

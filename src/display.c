@@ -19,12 +19,9 @@ void display_key_0(float **key, int size)
 
 void display_psw_0(float **password, int size, int sizepsw)
 {
-    int i = 0;
-    int j = 0;
-
     printf("\nEncrypted message:\n");
-    for (i = 0; i != sizepsw; i++) {
-        for (j = 0; j != size; j++) {
+    for (int i = 0; i != sizepsw; i++) {
+        for (int j = 0; j != size; j++) {
             if (i == sizepsw -1 && j == size - 1) {
                   printf("%.0f", password[i][j]);
                   break;
@@ -48,4 +45,9 @@ void display_key_1(float **key)
 void display_psw_1(float **password, int size, int sizepsw)
 {
     printf("\nDecrypted message:\n");
+    for (int i = 0; i != sizepsw; i++) {
+        for (int j = 0; j != size; j++)
+            printf("%.f ", password[i][j]);
+    }
+    printf("\n");
 }

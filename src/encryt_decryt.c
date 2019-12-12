@@ -18,7 +18,12 @@ void encryt(char **av, float **key, float **password)
 
 void decryt(char **av, float **key, float **password)
 {
+    char **msg = my_split(av[1]);
+
     key = make_key(av[2]);
+    password = trans_msg(msg, av);
     if (make_size(av[2]) == 2)
-        reverse2x2(key);
+        key = reverse2x2(key);
+    password = calc_decryt_m(password, key, make_size(av[2]), LENGHT);
+    display_psw_1(password, make_size(av[2]), LENGHT);
 }
