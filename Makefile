@@ -15,7 +15,9 @@ SRC	=	src/main.c \
 		src/my_strlen.c \
 		src/display.c \
 		src/architect.c \
-		src/make_emptymatrix.c
+		src/make_emptymatrix.c \
+		src/encryt_decryt.c \
+		src/reverse.c
 
 CC	=	gcc
 

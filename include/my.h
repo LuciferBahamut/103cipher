@@ -27,6 +27,10 @@ void display_key_0(float **key, int size);
 int make_size(char *key);
 int num_ligne(int len, int size);
 void display_psw_0(float **password, int size, int sizepsw);
+void encryt(char **av, float **key, float **password);
+void decryt(char **av, float **key, float **password);
+float reverse2x2(float **matrix);
+void display_key_1(float **key);
 
 #define LENGHT num_ligne(my_strlen(av[1]), make_size(av[2]))
 

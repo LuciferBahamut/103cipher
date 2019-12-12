@@ -34,3 +34,18 @@ void display_psw_0(float **password, int size, int sizepsw)
     }
     printf("\n");
 }
+
+void display_key_1(float **key)
+{
+    printf("Key matrix:\n");
+    for (int i = 0; i != 2; i++) {
+        for (int j = 0; j != 2; j++)
+            printf("%.3f\t", key[i][j]);
+    printf("\n");
+    }
+}
+
+void display_psw_1(float **password, int size, int sizepsw)
+{
+    printf("\nDecrypted message:\n");
+}

@@ -18,15 +18,9 @@ int main(int ac, char **av)
         display_help();
         return (0);
     }
-    if (av[3][0] == '0') {
-    key = make_key(av[2]);
-    display_key_0(key, make_size(av[2]));
-    password = make_password(av[1], make_size(av[2]));
-    password = mult_architech(password, key, make_size(av[2]), LENGHT);
-    display_psw_0(password, make_size(av[2]), LENGHT);
-    }
-    if (av[3][0] == '1') {
-        return (0);
-    }
+    if (av[3][0] == '0')
+        encryt(av, key, password);
+    if (av[3][0] == '1')
+        decryt(av, key, password);
     return (0);
 }
