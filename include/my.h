@@ -21,11 +21,13 @@ float **make_password(char *password, int size);
 int get_size(float **f);
 int my_strlen(char *str);
 int make_size(char *key);
-float **mult_architech(float **f, float **key, int size);
+float **mult_architech(float **f, float **key, int size, int lenght);
 float **make_emptymatrix(int width, int height);
 void display_key_0(float **key, int size);
 int make_size(char *key);
 int num_ligne(int len, int size);
 void display_psw_0(float **password, int size, int sizepsw);
+
+#define LENGHT num_ligne(my_strlen(av[1]), make_size(av[2]))
 
 #endif

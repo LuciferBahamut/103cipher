@@ -7,22 +7,23 @@
 
 #include "my.h"
 
-float calc_multi(float **f, float **key, int i, int j)
+float calc_multi(float **f, float **key, int i, int j, int size)
 {
     float r = 0;
-   
-    for (int s = 0; s < 3; s++)
+    
+    for (int s = 0; s < size; s++)
         r += f[i][s] * key[s][j];
     return (r);
 }
 
-float **mult_architech(float **f, float **key, int size)
+float **mult_architech(float **f, float **key, int size, int lenght)
 {
-    float **r = make_emptymatrix(size, get_size(f));
-    
-    for (int i = 0; i < get_size(f); i++) {
-        for (int j = 0; j < size; j++)
-            r[i][j] = calc_multi(f, key, i, j);
+    float **r = make_emptymatrix(size, lenght);
+
+    for (int i = 0; i < lenght; i++) {
+        for (int j = 0; j < size; j++) {
+            r[i][j] = calc_multi(f, key, i, j, size);
+        }
     }
     return (r);
 }
