@@ -30,12 +30,13 @@ int num_ligne(int len, int size);
 void display_psw_0(float **password, int size, int sizepsw);
 void encryt(char **av, float **key, float **password);
 void decryt(char **av, float **key, float **password);
-float **reverse2x2(float **matrix);
-void display_key_1(float **key);
-void display_psw_1(float **password, int size, int sizepsw);
+float **reverse2x2(float **matrix, int size);
+void display_key_1(float **key, int size);
+void display_psw_1(int **password, int size, int sizepsw);
 int nb_space(char *msg);
 float **trans_msg(char **msg, char **av, int size);
-float **calc_decryt_m(float **psw, float **key, int size, int lenght);
+int **calc_decryt_m(float **psw, float **key, int size, int lenght);
+int **make_emptymatrix_d(int width, int height);
 
 #define LENGHT num_ligne(my_strlen(av[1]), make_size(av[2]))
 

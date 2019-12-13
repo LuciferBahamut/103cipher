@@ -15,3 +15,12 @@ float **make_emptymatrix(int width, int height)
         r[i] = malloc(width);
     return (r);
 }
+
+int **make_emptymatrix_d(int width, int height)
+{
+    int **r = malloc(sizeof(float *) * height);
+
+    for (int i = 0; i < height; i++)
+        r[i] = malloc(width);
+    return (r);
+}
