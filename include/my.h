@@ -37,6 +37,7 @@ int nb_space(char *msg);
 float **trans_msg(char **msg, char **av, int size);
 int **calc_decryt_m(float **psw, float **key, int size, int lenght);
 int **make_emptymatrix_d(int width, int height);
+float **reverse3x3(float **matrix, int size);
 
 #define LENGHT num_ligne(my_strlen(av[1]), make_size(av[2]))
 

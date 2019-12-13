@@ -7,6 +7,39 @@
 
 #include "my.h"
 
+float **matrix_det_calc(float **matrix, float det1, float det2, float det3)
+{
+    float **matrix_det = make_emptymatrix(3, 3);
+
+    matrix_det[0][0] = det1;
+    matrix_det[0][1] = det2;
+    matrix_det[0][2] = det3;
+    matrix_det[1][0] = -1 * ((matrix[1][0] * matrix[2][2]) - (matrix[2][0] * matrix[1][2]));
+    matrix_det[1][1] = (matrix[0][0] * matrix[2][2]) - (matrix[0][2] * matrix[2][0]);
+    matrix_det[1][2] = -1 * ((matrix[0][0] * matrix[1][2]) - (matrix[1][0] * matrix[0][2]));
+    matrix_det[2][0] = (matrix[1][0] * matrix[2][1]) - (matrix[1][1] * matrix[2][0]);
+    matrix_det[2][1] = -1 * ((matrix[0][0] * matrix[2][1]) - (matrix[0][1] * matrix[2][0]));
+    matrix_det[2][2] = (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]);
+
+    return (matrix_det);
+}
+
+float **reverse3x3(float **matrix, int size)
+{
+    float det1 = (matrix[1][1] * matrix[2][2]) - (matrix[1][2] * matrix[2][1]);
+    float det2 = -1 * ((matrix[0][1] * matrix[2][2]) - (matrix[0][2] * matrix[2][1]));
+    float det3 = (matrix[0][1] * matrix[1][2]) - (matrix[0][2] * matrix[1][1]);
+    float det = (matrix[0][0] * det1) + (matrix[1][0] * det2) + (matrix[2][0] * det3);
+    float **matrix_det = matrix_det_calc(matrix, det1, det2, det3);
+    float A = 1 / det;
+    
+    for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
+            matrix_det[i][j] = matrix_det[i][j] * A;
+    display_key_1(matrix_det, size);
+    return (matrix_det);
+}
+
 float **reverse2x2(float **matrix, int size)
 {
     float a = matrix[0][0];

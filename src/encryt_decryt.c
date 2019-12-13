@@ -22,9 +22,15 @@ void decryt(char **av, float **key, float **password)
     int **psw;
 
     key = make_key(av[2]);
+    printf("key create\n");
     password = trans_msg(msg, av, make_size(av[2]));
+    printf("psw trad\n");
     if (make_size(av[2]) == 2)
         key = reverse2x2(key, make_size(av[2]));
+    if (make_size(av[2]) == 3)
+        key = reverse3x3(key, make_size(av[2]));
+    printf("key rev\n");
     psw = calc_decryt_m(password, key, make_size(av[2]), nb_space(av[1]) + 1);
+    printf("psw calc\n");
     display_psw_1(psw, make_size(av[2]), nb_space(av[1]));
 }
