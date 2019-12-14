@@ -32,9 +32,8 @@ float calc_multi_decryt(float **f, float **key, int i, int j, int size)
 {
     float r = 0;
     
-    for (int s = 0; s < size; s++) {
-        printf("YES , s = %d, j = %d\n", s, j);
-        r += f[i][s] * key[s][j]; }
+    for (int s = 0; s < size; s++)
+        r += f[i][s] * key[s][j];
     return (r);
 }
 
@@ -45,13 +44,9 @@ int **calc_decryt_m(float **psw, float **key, int size, int lenght)
 
     if (lenght % size == 1)
         nb_ligne++;
-    printf("size = %d lenght = %d nb_ligne = %d\n", size, lenght, nb_ligne);
     r = make_emptymatrix_d(size, nb_ligne);
     for(int i = 0; i < nb_ligne; i++)
-        for (int j = 0; j < size; j++) {
-            printf("i = %d j = %d\n", i, j);
+        for (int j = 0; j < size; j++)
             r[i][j] = round(calc_multi_decryt(psw, key, i, j, size));
-            printf("%d\n", r[i][j]);
-        }
     return (r);
 }

@@ -20,7 +20,6 @@ float **matrix_det_calc(float **matrix, float det1, float det2, float det3)
     matrix_det[2][0] = (matrix[1][0] * matrix[2][1]) - (matrix[1][1] * matrix[2][0]);
     matrix_det[2][1] = -1 * ((matrix[0][0] * matrix[2][1]) - (matrix[0][1] * matrix[2][0]));
     matrix_det[2][2] = (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]);
-
     return (matrix_det);
 }
 
