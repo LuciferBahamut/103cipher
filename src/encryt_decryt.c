@@ -22,11 +22,16 @@ void decryt(char **av, float **key, float **password)
     int **psw;
 
     key = make_key(av[2]);
-    password = trans_msg(msg, av, make_size(av[2]));
-    if (make_size(av[2]) == 2)
+    if (make_size(av[2]) == 2) {
+        password = trans_msg2x2(msg, av, make_size(av[2]));
         key = reverse2x2(key, make_size(av[2]));
-    if (make_size(av[2]) == 3)
+        psw = calc_decryt_m(password, key, make_size(av[2]), nb_space(av[1]) + 1);
+        display_psw_12x2(psw, make_size(av[2]), nb_space(av[1]));
+}
+    if (make_size(av[2]) == 3) {
+        password = trans_msg(msg, av, make_size(av[2]));
         key = reverse3x3(key, make_size(av[2]));
-    psw = calc_decryt_m(password, key, make_size(av[2]), nb_space(av[1]) + 1);
-    display_psw_1(psw, make_size(av[2]), nb_space(av[1]));
+        psw = calc_decryt_m(password, key, make_size(av[2]), nb_space(av[1]) + 1);
+        display_psw_1(psw, make_size(av[2]), nb_space(av[1]));
+    }
 }

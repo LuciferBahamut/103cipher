@@ -49,7 +49,7 @@ void display_key_1(float **key, int size)
     }
 }
 
-void display_psw_1(int **password, int size, int sizepsw)
+void display_psw_12x2(int **password, int size, int sizepsw)
 {
     int nb_ligne = sizepsw / size;
         
@@ -57,6 +57,23 @@ void display_psw_1(int **password, int size, int sizepsw)
     if (sizepsw % size == 1)
         nb_ligne++;
     for (int i = 0; i != nb_ligne; i++) {
+        for (int j = 0; j != size; j++) {
+            if (password[i][j] < 32 || password[i][j] > 126)
+                break;
+            printf("%c", password[i][j]);
+        }
+    }
+    printf("\n");
+}
+
+void display_psw_1(int **password, int size, int sizepsw)
+{
+    int nb_ligne = sizepsw / size;
+        
+    printf("\nDecrypted message:\n");
+    if (sizepsw % size == 1)
+        nb_ligne++;
+    for (int i = 0; i != nb_ligne + 1; i++) {
         for (int j = 0; j != size; j++) {
             if (password[i][j] < 32 || password[i][j] > 126)
                 break;

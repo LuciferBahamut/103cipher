@@ -18,9 +18,9 @@ float **make_emptymatrix(int width, int height)
 
 int **make_emptymatrix_d(int width, int height)
 {
-    int **r = malloc(sizeof(float *) * height + 1);
+    int **r = malloc(sizeof(float *) * (height + 1));
 
     for (int i = 0; i < height; i++)
-        r[i] = malloc(width);
+        r[i] = malloc(width + 1);
     return (r);
 }
