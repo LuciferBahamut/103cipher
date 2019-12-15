@@ -12,7 +12,7 @@ float **trans_msg(char **msg, char **av, int size)
     float **psw;
     int k = 0;
     int nbnb = nb_space(av[1]);
-    int nb_ligne = nbnb / size;
+    int nb_ligne = num_ligne(nbnb, size);
 
     if (nbnb % size == 1)
         nb_ligne = nb_ligne + 1;

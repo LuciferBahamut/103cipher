@@ -45,8 +45,10 @@ int **calc_decryt_m(float **psw, float **key, int size, int lenght)
     if (lenght % size == 1)
         nb_ligne++;
     r = make_emptymatrix_d(size, nb_ligne);
-    for(int i = 0; i < nb_ligne; i++)
-        for (int j = 0; j < size; j++)
+    for(int i = 0; i < nb_ligne; i++) {
+        for (int j = 0; j < size; j++) {
             r[i][j] = round(calc_multi_decryt(psw, key, i, j, size));
+        }
+    }
     return (r);
 }
