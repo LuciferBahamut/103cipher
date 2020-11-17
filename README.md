@@ -1,5 +1,5 @@
 <h1>103cipher</h1>
-<h3>{EPITECH} -- First year -- third maths project</h3>
+<h3>{EPITECH} -- First year -- Semester 1 -- third maths project</h3>
 
 <p>1st semester Maths unit : Grade A</p>
 
