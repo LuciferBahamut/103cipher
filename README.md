@@ -1,22 +1,17 @@
-# 103cipher
-{EPITECH} -- First year -- third maths project
+<h1>103cipher</h1>
+<h3>{EPITECH} -- First year -- third maths project</h3>
 
-1st semester Maths unit : Grade A
+<p>1st semester Maths unit : Grade A</p>
 
-103cipher_2019 -- Without Crash
+<p>103cipher_2019 -- Without Crash</p>
 
-Result : 83,9 %
+<p>Result : 83,9 %</p>
+  <li>Rigor : 100 % -- 7 / 7</li>
+  <li>Matrix : 100 % -- 8 / 8</li>
+  <li>Encryption : 100 % -- 8 / 8</li>
+  <li>Decryption : 50 % -- 3 / 6</li>
+  <li>Decryption size 4 (Bonus) : 0 % -- 0 / 2</li>
+  <p></p>
+<p>Beware of -42 for Epitech students !</p>
 
-  - Rigor : 100 % -- 7 / 7
-  
-  - Matrix : 100 % -- 8 / 8
-  
-  - Encryption : 100 % -- 8 / 8
-  
-  - Decryption : 50 % -- 3 / 6
-  
-  - Decryption size 4 (Bonus) : 0 % -- 0 / 2
-  
-Beware of -42 for Epitech students !
-
-[Group] Made with Guerlain Blanchard
+<p>[Group] Made with Guerlain Blanchard</p>
